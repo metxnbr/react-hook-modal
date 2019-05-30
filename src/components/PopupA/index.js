@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 export default ({ makeClose }) => {
   return (
     <div className={styles.wrap} onClick={makeClose}>
-      ddd
+      aaaa
     </div>
   );
 };
