@@ -27,9 +27,18 @@ function App() {
     <div className="App">
       <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
-      <button onClick={() => setPopA(true)}>Popup A</button>
-      <button onClick={() => setPopB(true)}>Popup B</button>
-      <button onClick={() => setPopC(true)}>Popup C</button>
+      <div className="btn-item">
+        <button onClick={() => setPopA(true)}>Popup A</button>
+        <div className="btn-intro">居中弹窗, 点击遮罩层也可以关闭弹窗</div>
+      </div>
+      <div className="btn-item">
+        <button onClick={() => setPopB(true)}>Popup B</button>
+        <div className="btn-intro">自定义弹窗位置</div>
+      </div>
+      <div className="btn-item">
+        <button onClick={() => setPopC(true)}>Popup C</button>
+        <div className="btn-intro">背景色为白色 + 透明</div>
+      </div>
       <PopupAModal
         show={popA}
         makeClose={closePopA}
