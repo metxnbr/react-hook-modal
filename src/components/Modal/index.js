@@ -52,6 +52,10 @@ const Modal = ({ children, show, layerStyle, pos, makeCloseItself }) => {
 
   const wrapClass = show ? `${styles.wrap} ${styles.show}` : styles.wrap;
 
+  const popClass = show
+    ? `${styles["pop-wrap"]} ${styles.show}`
+    : styles["pop-wrap"];
+
   return (
     <div className={wrapClass}>
       <div
@@ -59,7 +63,7 @@ const Modal = ({ children, show, layerStyle, pos, makeCloseItself }) => {
         style={layerStyle}
         onClick={makeCloseItself}
       />
-      <div className={styles["pop-wrap"]} ref={popEl} style={offset}>
+      <div className={popClass} ref={popEl} style={offset}>
         {children}
       </div>
     </div>

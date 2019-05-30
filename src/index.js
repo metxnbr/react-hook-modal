@@ -29,7 +29,7 @@ function App() {
       <h2>Start editing to see some magic happen!</h2>
       <div className="btn-item">
         <button onClick={() => setPopA(true)}>Popup A</button>
-        <div className="btn-intro">居中弹窗, 点击遮罩层也可以关闭弹窗</div>
+        <div className="btn-intro">居中弹窗, 除点击弹窗外, 点击遮罩层也可以关闭弹窗</div>
       </div>
       <div className="btn-item">
         <button onClick={() => setPopB(true)}>Popup B</button>
