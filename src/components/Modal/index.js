@@ -18,19 +18,23 @@ const Modal = ({ children, show, layerStyle, pos, makeCloseItself }) => {
   const adjustPos = ({ offset, pos }) => {
     const { width, height } = offset;
 
-    let { vertical, horizontal } = pos;
+    const { vertical, horizontal } = pos;
 
-    horizontal = horizontal === "center" ? "50%" : `${horizontal}px`;
-    vertical = vertical === "center" ? "50%" : `${vertical}px`;
+    const match = /center|middle/;
 
-    const marginLeft =
-      horizontal === "center" ? { marginLeft: `-${width / 2}px` } : {};
-    const marginTop =
-      vertical === "center" ? { marginTop: `-${height / 2}px` } : {};
+    const left = match.test(horizontal) ? "50%" : `${horizontal}px`;
+    const top = match.test(vertical) ? "50%" : `${vertical}px`;
+
+    const marginLeft = match.test(horizontal)
+      ? { marginLeft: `-${width / 2}px` }
+      : {};
+    const marginTop = match.test(vertical)
+      ? { marginTop: `-${height / 2}px` }
+      : {};
 
     return {
-      left: horizontal,
-      top: vertical,
+      left,
+      top,
       ...marginLeft,
       ...marginTop
     };
