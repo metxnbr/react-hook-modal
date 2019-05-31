@@ -10,7 +10,9 @@ Created with CodeSandbox
 
 利用`useLayoutEffect`优化了弹窗的交互, 设置弹窗弹出, 浏览器窗口禁止滚动, 弹窗关闭, 则恢复
 
-该组件只提供弹窗包裹, 弹窗交互, 具体弹窗需要自己编写定制
+该组件只提供弹窗包裹和弹窗交互, 具体弹窗需要自己编写定制
+
+[Modal组件](./src/components/Modal/index.js)
 
 ## Roadmap
 
