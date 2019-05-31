@@ -12,7 +12,7 @@ Created with CodeSandbox
 
 该组件只提供弹窗包裹和弹窗交互, 具体弹窗需要自己编写定制
 
-[Modal组件](./src/components/Modal/index.js)
+[Modal 组件](./src/components/Modal/index.js)
 
 ## Roadmap
 
